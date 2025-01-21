@@ -1,0 +1,29 @@
+//number of recurring digits 
+#include <stdio.h>
+
+int main()
+{
+    int n, n1;
+    scanf("%d", &n);
+
+    int a[10] = {0}; 
+    int count = 0;
+
+   
+    n1 = n;
+    while (n1 > 0) {
+        int d = n1 % 10; 
+        a[d]++;          
+        n1 = n1 / 10;    
+    }
+
+    
+    for (int i = 0; i < 10; i++) {
+        if (a[i] > 1) { 
+            count++;
+        }
+    }
+
+    printf("%d", count); 
+    return 0;
+}
