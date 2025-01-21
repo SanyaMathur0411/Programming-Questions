@@ -1,0 +1,19 @@
+//Butterfly pattern in one line  
+
+#include <stdio.h>
+
+int main() 
+{
+    char str[100];
+    int n;
+    scanf("%s%n",str,&n);
+    for(int i=1;i<=n;i++)
+    {
+        printf("%-*.*s%*.*s\n",n,i,str,n,i,str);
+    }
+    for(int i=n;i>=1;i--)
+    {
+        printf("%-*.*s%*.*s\n",n,i,str,n,i,str);
+    }
+    
+}
